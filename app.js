@@ -1,5 +1,5 @@
 "use strict";
-const API = "https://restcountries.com/v3.1";
+const API = "https://countriesnow.space/api/v0.1/countries";
 const LIST_FIELDS = "name,cca3,flags,region,population,capital";
 const DETAIL_FIELDS = "name,flags,capital,region,subregion,population,area,languages,currencies,timezones,maps";
 const PER_PAGE = 12;
