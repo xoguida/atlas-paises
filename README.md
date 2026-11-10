@@ -40,12 +40,16 @@ app.js       lógica: fetch, búsqueda, paginación, render, errores
 ```
 
 ## Capturas
-Guarda tus capturas en `capturas/`:
-- `![Listado](capturas/listado.png)`
-- `![Búsqueda por ciudad](capturas/ciudad.png)`
-- `![Detalle](capturas/detalle.png)`
-- `![Error](capturas/error.png)`
-- `![Sin resultados](capturas/vacio.png)`
+
+![Listado](capturas/listado.png)
+
+![Búsqueda por ciudad](capturas/ciudad.png)
+
+![Detalle de país](capturas/detalle.png)
+
+![Sin resultados](capturas/vacio.png)
+
+![Error con reintento](capturas/error.png)
 
 ## Reflexión técnica
 Esta actividad me permitió integrar un servicio externo con JSON y programación asíncrona. El endpoint principal devuelve países con todas sus ciudades en una sola respuesta grande, así que la descargo una vez, muestro un estado de carga y hago búsqueda y filtros en el cliente para que la interacción sea inmediata. Los datos extra (bandera, capital, moneda, población) requieren peticiones POST por país; las lanzo en paralelo con `Promise.allSettled` para que el fallo de una no impida mostrar el resto. Aprendí que una API puede responder HTTP 200 con `error: true`, por lo que validé también el cuerpo. Usé `textContent` y `createElement` en lugar de `innerHTML` para evitar inyección de HTML, y un contador para ignorar respuestas de fichas que el usuario ya cerró. Como mejora futura agregaría caché en `sessionStorage` y favoritos.
