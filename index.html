@@ -3,33 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atlas de países · REST Countries</title>
-  <meta name="description" content="Explora países del mundo consumiendo la API pública REST Countries.">
+  <title>Atlas de países y ciudades · CountriesNow</title>
+  <meta name="description" content="Explora países y sus ciudades consumiendo la API pública CountriesNow.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="top">
-    <h1>Atlas de países</h1>
-    <p>Busca un país, filtra por región y abre su ficha. Datos de la API pública REST Countries.</p>
+    <h1>Atlas de países y ciudades</h1>
+    <p>Busca por país o por ciudad y abre la ficha de cada país. Datos de la API pública CountriesNow.</p>
   </header>
 
   <main>
     <section class="controls" aria-label="Filtros">
-      <label>Buscar por nombre
-        <input id="search" type="search" placeholder="Ej. México, Japan, Brasil" autocomplete="off">
+      <label>Buscar país o ciudad
+        <input id="search" type="search" placeholder="Ej. Mexico, Tokyo, Lima" autocomplete="off">
       </label>
-      <label>Región
-        <select id="region">
-          <option value="">Todas</option>
-          <option>Africa</option><option>Americas</option><option>Asia</option>
-          <option>Europe</option><option>Oceania</option><option>Antarctic</option>
+      <label>Ciudades registradas
+        <select id="min">
+          <option value="0">Cualquier cantidad</option>
+          <option value="10">10 o más</option>
+          <option value="50">50 o más</option>
+          <option value="200">200 o más</option>
         </select>
       </label>
       <label>Ordenar por
         <select id="sort">
           <option value="name">Nombre (A–Z)</option>
-          <option value="pop-desc">Población (mayor a menor)</option>
-          <option value="pop-asc">Población (menor a mayor)</option>
+          <option value="cities-desc">Más ciudades primero</option>
+          <option value="cities-asc">Menos ciudades primero</option>
         </select>
       </label>
     </section>
@@ -45,7 +46,7 @@
     <button id="close" class="btn">Cerrar</button>
   </dialog>
 
-  <footer>Fuente: <a href="https://restcountries.com" target="_blank" rel="noopener">restcountries.com</a></footer>
+  <footer>Fuente: <a href="https://countriesnow.space" target="_blank" rel="noopener">countriesnow.space</a></footer>
   <script src="app.js"></script>
 </body>
 </html>
