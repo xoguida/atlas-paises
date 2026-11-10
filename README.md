@@ -23,7 +23,7 @@ Miniaplicación web que consume la API pública **REST Countries** con `fetch()`
 
 ## Uso local
 ```bash
-git clone https://github.com/xoguida/atlas-paises.git
+git clone https://github.com/xoguida/atlas-paises
 cd atlas-paises
 # abre index.html en el navegador, o:
 python3 -m http.server 8000   # http://localhost:8000
