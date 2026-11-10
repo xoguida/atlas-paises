@@ -2,7 +2,7 @@
 
 Miniaplicación web que consume la API pública **REST Countries** con `fetch()` y `async/await` para buscar, filtrar y explorar países.
 
-- **Demo:** https://xoguida.github.io/~atlas-paises~/
+- **Demo:** https://xoguida.github.io/atlas-paises/
 - **Repositorio:** https://github.com/xoguida/atlas-paises
 
 ## API utilizada
